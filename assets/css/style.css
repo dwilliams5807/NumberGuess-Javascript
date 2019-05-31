@@ -1,0 +1,10 @@
+
+body {
+    text-align: center;
+    background-color:#3f3f3e;
+    font: Georgia, "Times New Roman",Times,serif;
+    color:#ddd8d8
+}
+.score {
+    border: 5px, white;
+}
