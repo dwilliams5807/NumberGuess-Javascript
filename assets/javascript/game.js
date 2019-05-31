@@ -15,14 +15,15 @@
             var lossesText = document.getElementById("losses-text");
             var remainText = document.getElementById("remain-text");
             var guessedText = document.getElementById("guessed-text");
-
+            
+            
 
             if (userChoices.indexOf(userGuess) > -1){
                 if (userGuess === computerGuess) {
                     wins++;
                     guessesRemain = 8;
                     lettersGuessed = [];
-                    alert("You Won! Yay!");
+                    alert("How did you know what I was thinking? Good job!");
                 }
                 if (userGuess != computerGuess) {
                     guessesRemain --;
@@ -32,9 +33,14 @@
                     lettersGuessed = [];
                     losses ++;
                     guessesRemain = 8;
+                    alert("You lose. Try again?")
+                    var audio = new Audio("https://wompwompwomp.com");
+                    audio.play();
+                    
+
                 }
-                winsText.textContent = "wins: " + wins;
-                lossesText.textContent = "losses: " +losses;
+                winsText.textContent = "Wins: " + wins;
+                lossesText.textContent = "Losses: " +losses;
                 remainText.textContent = "Remaining Guesses: " + guessesRemain;
                 guessedText.textContent = "You've Guessed So Far: " + lettersGuessed.join(", ");
 
